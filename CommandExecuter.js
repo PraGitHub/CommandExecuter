@@ -5,6 +5,7 @@ var strCommand = "";
 var iArguments = process.argv.length
 var strTimeStamp = helper.GetTimeStamp();
 var strOutFile = "";
+
 //console.log(process.argv);
 for (let i = 0; i < iArguments; i++) {
     var strArgument = process.argv[i];
