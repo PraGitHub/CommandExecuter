@@ -1,0 +1,18 @@
+Command Line arguments :
+
+	-file="Full path of file"
+		This file will have set of all commands to be executed
+		Commands should be separated by "\r\n"(i.e. each line should be a command)
+		Commands must be within appropriate quotes.
+
+	-command="Entire command"
+		Command should be within appropriate quotes
+
+	-result="Full path of file"
+		This will have the results of each commands
+		If result of a command is a file in itself then it will have a path of that file
+		By Default the out file will be placed in /OutFiles/TimeStamp.outfile
+
+	-help
+		This will  display the guide to use this tool
+		If this is passed none of the other keys are honoured.
