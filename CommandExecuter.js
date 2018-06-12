@@ -1,6 +1,5 @@
 // JavaScript source code
 var helper = require('./HelperFunctions');
-var iArguments = process.argv.length;
 var strInFile = "";
 var strCommand = "";
 var iArguments = process.argv.length
