@@ -1,11 +1,11 @@
 // JavaScript source code
 var helper = require('./HelperFunctions');
-var iArguments = process.argv.length;
 var strInFile = "";
 var strCommand = "";
 var iArguments = process.argv.length
 var strTimeStamp = helper.GetTimeStamp();
 var strOutFile = "";
+var strSync = "";
 //console.log(process.argv);
 for (let i = 0; i < iArguments; i++) {
     var strArgument = process.argv[i];
@@ -24,6 +24,13 @@ for (let i = 0; i < iArguments; i++) {
     if (strOutFile == "") {
         strOutFile = helper.GetStringExcludingSubStirng(strArgument, '-result=');
     }
+    if (strSync == "") {
+        strSync = helper.GetStringExcludingSubStirng(strArgument, '-sync=');
+    }
+}
+
+if (strSync == "") {
+    strSync = "off";
 }
 
 if (strOutFile == "") {
@@ -34,9 +41,15 @@ if (strOutFile == "") {
 console.log('strInFile = ' + strInFile);
 console.log('strCommand = ' + strCommand);
 console.log('strOutFile = ' + strOutFile);
+console.log('strSync = ' + strSync);
 
 if (strCommand != "") {
-    helper.ExecuteCommand(strCommand, strOutFile);
+    if (strSync == "off") {
+        helper.ExecuteCommand(strCommand, strOutFile, true);
+    }
+    else {
+        helper.ExecuteCommandSyncOutToFile(strCommand, strOutFile, true);
+    }
 }
 
 if (helper.DoesFileExist(strInFile) == true) {
