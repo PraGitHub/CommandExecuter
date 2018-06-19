@@ -29,12 +29,13 @@ for (let i = 0; i < iArguments; i++) {
     }
 }
 
+helper.CreateDirectory(__dirname + '/OutFiles');
+
 if (strSync == "") {
     strSync = "off";
 }
 
 if (strOutFile == "") {
-    helper.CreateDirectory(__dirname + '/OutFiles');
     strOutFile = __dirname + '/OutFiles/' + strTimeStamp + '.outfile';
 }
 
