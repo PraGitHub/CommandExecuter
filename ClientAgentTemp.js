@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var helper = require('./HelperFunctions');
 var app = express();
 var httpPort = 8086;
+helper.CreateDirectory(__dirname + '/OutFiles');
 
 app.listen(httpPort, function () {
     console.log('Client Agent is listening to ' + httpPort);
