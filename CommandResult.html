@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>ClientAgent</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="jumbotron text-white bg-dark">
+            <h4>Client Agent</h4>
+        </div>
+        <div class="container">
+            <ul class="navbar-nav nav-tab">
+                <li class="nav-item">
+                    <a class="nav-link" href="/#CommandExecuter">Command Executer</a>
+                </li>
+            </ul>     
+        </div>
+        <div class = "tab-content">
+            <div id = "CommandExecuter" class="container tab-pane active">
+                <form method="post" action="/ExecuteCommand">
+                    <div class="form-group" class="col-8">
+                        <input class="form-control form-control-sm" type = "text" name = "Command" placeholder = "command" required>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success">execute</button>
+                    </div>
+                </form>
+            </div>
+        </div>
