@@ -15,14 +15,7 @@ app.use(bodyParser.json()); //http response will be JSON formatted. The first pa
 app.use(bodyParser.urlencoded({ extended: true })); 
 
 app.get('/', function (httpReq, httpRes) {
-    httpRes.setHeader('content-type', 'text/html');
-    httpRes.write('<h4>Command Executer</h4>');
-    httpRes.write('<br/>');
-    httpRes.write('<form method="post" action="ExecuteCommand">');
-    httpRes.write('<input type="text" name="Command" placeholder="Command"/>');
-    httpRes.write('<input type="submit" value="Execute"/>');
-    httpRes.write('</form>');
-    httpRes.end();
+    httpRes.sendFile(__dirname+'/ClientAgentHome.html');
 });
 
 app.post('/ExecuteCommand', function (httpReq, httpRes) {
@@ -32,11 +25,10 @@ app.post('/ExecuteCommand', function (httpReq, httpRes) {
     helper.AppendToFile(strResultFile, '');
     helper.AppendToFile(strResultFileCE, '');
     helper.ExecuteCommand('node CommandExecuter -command="' + strCommand + '" -result="' + strResultFile + '"', strResultFileCE, true);
-    httpRes.setHeader('content-type', 'text/html');
-    httpRes.write('<div style="right:10%;top:10%"><a href="/">Home<a/></div>')
-    httpRes.write('<br/><br/>');
+    httpRes.write(helper.ReadFile(__dirname+'/CommandResult.html').toString());
+    httpRes.write('<div class="alert alert-info"><strong>')
     httpRes.write('Executing the command "' + strCommand + '" ...');
-    httpRes.write('<br/><br/>');
+    httpRes.write('</strong></div>');
 
     helper.WatchFile(strResultFileCE + 'DONE', function (currentStatus, previousStatus) {
         if (currentStatus.mode > previousStatus.mode) {
@@ -49,9 +41,14 @@ app.post('/ExecuteCommand', function (httpReq, httpRes) {
             strError = strTemp.substr(iPosErrorEnd, (iPosSTDOUTBegin - iPosErrorEnd));
             //console.log('ClientAgent::strError = ' + strError);
             if (strError.indexOf('null') == -1) {
+                httpRes.write('<div class="alert alert-danger"><strong>');
                 httpRes.write('Following Error was encountered in spawning CommandExecuter');
-                httpRes.write('<br/><br/>');
+                httpRes.write('</strong></div>');
+                httpRes.write('<pre>');
+                httpRes.write('<div class="alert alert-danger"><strong>');
                 httpRes.write(helper.ConvertToHTML(strError));
+                httpRes.write('</strong></div>');
+                httpRes.write('<pre/>');
                 httpRes.write('<br/><br/>');
                 httpRes.end();
                 helper.DeleteFile(strResultFile + 'DONE');
@@ -60,6 +57,7 @@ app.post('/ExecuteCommand', function (httpReq, httpRes) {
             }
             if (helper.DoesFileExist(strResultFile + 'DONE')) {
                 var strResult = helper.ReadFile(strResultFile);
+                httpRes.write('<div class="alert alert-success"><strong>');
                 httpRes.write(helper.ConvertToHTML(strResult));
                 httpRes.end();
                 helper.DeleteFile(strResultFile + 'DONE');
