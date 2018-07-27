@@ -2,6 +2,8 @@
 
 How to use ?
 
+    Install NodeJS
+    
     Copy these files
       run 'npm install'
 
