@@ -10,7 +10,7 @@ app.listen(httpPort, function () {
     console.log('Client Agent is listening to ' + httpPort);
 });
 
-app.use(bodyParser.json()); //http response will be JSON formatted. The first parameter of callback function
+app.use(bodyParser.json()); //http request will be JSON formatted. The first parameter of callback function
                             //of any app.post or app.get will be JSON formatted.
 app.use(bodyParser.urlencoded({ extended: true })); 
 
