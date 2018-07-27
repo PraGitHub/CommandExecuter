@@ -9,6 +9,21 @@ var fpReadFile = function ReadFile(strFileFullPath) {
     return fs.readFileSync(strFileFullPath);
 }
 
+var fpGetHTMLFolder = function GetHTMLFolder(){
+    var strPath = __dirname;
+    var strToFind = '\\';
+    if(strPath.indexOf('/')>-1){
+        strToFind = '/';
+    }
+    var strLastCharacter = strPath.substr(strPath.length-1);
+    if(strLastCharacter == strToFind){
+        strPath = strPath.substr(0,strPath.length-1);
+    }
+    strPath = strPath.substr(0,strPath.lastIndexOf(strToFind));
+    strPath = strPath + '/html';
+    return strPath;
+}
+
 var fpSleepMS = function SleepMS(iTimeMS){
     var iStartTime = fpGetTimeStamp();
     var iNow = fpGetTimeStamp();
@@ -138,3 +153,4 @@ exports.SleepMS = fpSleepMS;
 exports.WatchFile = WatchFile;
 exports.DeleteFile = DeleteFile;
 exports.ConvertToHTML = fpConvertToHTML;
+exports.GetHTMLFolder = fpGetHTMLFolder;

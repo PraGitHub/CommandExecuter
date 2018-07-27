@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var helper = require('./HelperFunctions');
 var app = express();
 var httpPort = 8086;
+var strHTMLPath = helper.GetHTMLFolder();
 helper.CreateDirectory(__dirname + '/OutFiles');
 
 app.listen(httpPort, function () {
@@ -15,7 +16,7 @@ app.use(bodyParser.json()); //http request will be JSON formatted. The first par
 app.use(bodyParser.urlencoded({ extended: true })); 
 
 app.get('/', function (httpReq, httpRes) {
-    httpRes.sendFile(__dirname+'/ClientAgentHome.html');
+    httpRes.sendFile(strHTMLPath+'/ClientAgentHome.html');
 });
 
 app.post('/ExecuteCommand', function (httpReq, httpRes) {
@@ -25,7 +26,7 @@ app.post('/ExecuteCommand', function (httpReq, httpRes) {
     helper.AppendToFile(strResultFile, '');
     helper.AppendToFile(strResultFileCE, '');
     helper.ExecuteCommand('node CommandExecuter -command="' + strCommand + '" -result="' + strResultFile + '"', strResultFileCE, true);
-    httpRes.write(helper.ReadFile(__dirname+'/CommandResult.html').toString());
+    httpRes.write(helper.ReadFile(strHTMLPath+'/CommandResult.html').toString());
     httpRes.write('<div class="alert alert-info"><strong>')
     httpRes.write('Executing the command "' + strCommand + '" ...');
     httpRes.write('</strong></div>');

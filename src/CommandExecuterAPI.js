@@ -16,7 +16,9 @@ Useful links :
 
 var express = require('express');
 var app = express();
+var helper = require(__dirname+'/HelperFunctions.js');
 var httpPort = 8085;
+var strHTMLPath = helper.GetHTMLFolder();
 
 app.listen(httpPort,function(err,res){
     if(err) throw err;
@@ -24,7 +26,7 @@ app.listen(httpPort,function(err,res){
 });
 
 app.get('/',function(httpReq,httpRes){
-    httpRes.sendFile(__dirname+'/CEAPIInstructions.html');
+    httpRes.sendFile(strHTMLPath+'/CEAPIInstructions.html');
 });
 
 app.get('/Execute/:command',function(httpReq,httpRes){
