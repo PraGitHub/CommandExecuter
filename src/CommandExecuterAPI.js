@@ -30,11 +30,20 @@ app.get('/',function(httpReq,httpRes){
 });
 
 app.get('/Execute/:command',function(httpReq,httpRes){
-    var JSONResponse = {
-        Command:httpReq.params.command,
-        Error:'Nothing',
-        StdOut:'Nothing',
-        StdErr:'Nothing'
-    };
-    httpRes.send(JSONResponse);
+    JSONResponse = helper.ExecuteCommand(httpReq.params.command,function(strError,strStdOut,strStdErr){
+        var JSONResponse = {
+            Command:httpReq.params.command,
+            Error:null,
+            StdOut:null,
+            StdErr:null
+        };
+        httpRes.setHeader('Content-Type', 'application/json');
+        if(strError){
+            JSONResponse.Error = strError;
+            httpRes.write(JSON.stringify(JSONResponse));
+        }
+        JSONResponse.StdOut = strStdOut;
+        JSONResponse.StdErr = strStdErr;
+        httpRes.write(JSON.stringify(JSONResponse));
+    });
 });

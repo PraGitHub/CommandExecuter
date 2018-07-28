@@ -84,6 +84,11 @@ var fpExecuteCommand = function ExecuteCommand(strCommand, strOutFile, bCreateDo
     });
 }
 
+var fpExecuteCommandUserCallback = function ExecuteCommand(strCommand,fpCallBack){
+    //console.log('fpExecuteCommandOutJSON :: ');
+    Execute(strCommand,fpCallBack);
+}
+
 var fpExecuteCommandSync2 = function ExecuteCommandSync(strCommand, strOutFile,bCreateDone = false) {
     var strOut = ExecuteSync(strCommand); 
     fpAppendToFileWithHeader(strOutFile,strOut, "STDOUT");
@@ -144,6 +149,7 @@ exports.ReadFile = fpReadFile;
 exports.ExecuteCommand = fpExecuteCommand;
 exports.ExecuteCommandSync = fpExecuteCommandSync;
 exports.ExecuteCommandSyncOutToFile = fpExecuteCommandSync2;
+exports.ExecuteCommand = fpExecuteCommandUserCallback;
 exports.CreateDirectory = fpCreateDirectory;
 exports.GetTimeStamp = fpGetTimeStamp;
 exports.DoesFileExist = fpDoesFileExist;
