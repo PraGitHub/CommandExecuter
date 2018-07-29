@@ -71,6 +71,7 @@ var fpCreateDirectory = function CreateDirectory(strDirectoryFullPath) {
 }
 
 var fpExecuteCommand = function ExecuteCommand(strCommand, strOutFile, bCreateDone = false) {
+    console.log('ExecuteCommand :: '+strCommand);
     Execute(strCommand, function (strError, strStdOut, strStdErr) {
         fpAppendToFile(strOutFile, 'Following is the result to the command - ' + '"' + strCommand + '"');
         fpAppendToFileWithHeader(strOutFile, strError, 'ERROR');
@@ -82,11 +83,6 @@ var fpExecuteCommand = function ExecuteCommand(strCommand, strOutFile, bCreateDo
         }
         return;
     });
-}
-
-var fpExecuteCommandUserCallback = function ExecuteCommand(strCommand,fpCallBack){
-    //console.log('fpExecuteCommandOutJSON :: ');
-    Execute(strCommand,fpCallBack);
 }
 
 var fpExecuteCommandSync2 = function ExecuteCommandSync(strCommand, strOutFile,bCreateDone = false) {
@@ -149,7 +145,6 @@ exports.ReadFile = fpReadFile;
 exports.ExecuteCommand = fpExecuteCommand;
 exports.ExecuteCommandSync = fpExecuteCommandSync;
 exports.ExecuteCommandSyncOutToFile = fpExecuteCommandSync2;
-exports.ExecuteCommand = fpExecuteCommandUserCallback;
 exports.CreateDirectory = fpCreateDirectory;
 exports.GetTimeStamp = fpGetTimeStamp;
 exports.DoesFileExist = fpDoesFileExist;
@@ -160,3 +155,4 @@ exports.WatchFile = WatchFile;
 exports.DeleteFile = DeleteFile;
 exports.ConvertToHTML = fpConvertToHTML;
 exports.GetHTMLFolder = fpGetHTMLFolder;
+exports.Execute = Execute;

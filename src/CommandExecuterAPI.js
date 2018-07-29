@@ -30,20 +30,20 @@ app.get('/',function(httpReq,httpRes){
 });
 
 app.get('/Execute/:command',function(httpReq,httpRes){
-    JSONResponse = helper.ExecuteCommand(httpReq.params.command,function(strError,strStdOut,strStdErr){
+    JSONResponse = helper.Execute(httpReq.params.command,function(strError,strStdOut,strStdErr){
         var JSONResponse = {
             Command:httpReq.params.command,
             Error:null,
             StdOut:null,
             StdErr:null
         };
+        console.log(strStdOut);
         httpRes.setHeader('Content-Type', 'application/json');
-        if(strError){
-            JSONResponse.Error = strError;
-            httpRes.write(JSON.stringify(JSONResponse));
-        }
-        JSONResponse.StdOut = strStdOut;
+        JSONResponse.Error = strError;
+        JSONResponse.StdOut = strStdOut.toString('utf-8');
         JSONResponse.StdErr = strStdErr;
-        httpRes.write(JSON.stringify(JSONResponse));
+        //httpRes.write(JSON.stringify(JSONResponse));
+        httpRes.json(JSONResponse);
+        httpRes.end();
     });
 });

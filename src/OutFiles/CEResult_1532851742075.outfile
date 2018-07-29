@@ -1,0 +1,19 @@
+
+Following is the result to the command - "node CommandExecuter -command="'type D:\temp\FieryCentral\FieryCentral\Device-bizhub PRO 1051-Constraints.txt'" -result="D:\NodeJS\CommandExecuter\src/OutFiles/CommandResult_1532851742075.outfile""
+ERROR : 
+null
+STDOUT : 
+0 - C:\Program Files\nodejs\node.exe
+1 - D:\NodeJS\CommandExecuter\src\CommandExecuter
+2 - -command='type D:\temp\FieryCentral\FieryCentral\Device-bizhub PRO 1051-Constraints.txt'
+3 - -result=D:\NodeJS\CommandExecuter\src/OutFiles/CommandResult_1532851742075.outfile
+strInFile = 
+strCommand = 'type D:\temp\FieryCentral\FieryCentral\Device-bizhub PRO 1051-Constraints.txt'
+strOutFile = D:\NodeJS\CommandExecuter\src/OutFiles/CommandResult_1532851742075.outfile
+strSync = off
+CommandExecuter :: "type D:\temp\FieryCentral\FieryCentral\Device-bizhub PRO 1051-Constraints.txt"
+ExecuteCommand :: "type D:\temp\FieryCentral\FieryCentral\Device-bizhub PRO 1051-Constraints.txt"
+
+STDERR : 
+
+*CommandExecuterEOC*

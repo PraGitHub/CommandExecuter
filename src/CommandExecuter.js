@@ -9,7 +9,7 @@ var strSync = "";
 //console.log(process.argv);
 for (let i = 0; i < iArguments; i++) {
     var strArgument = process.argv[i];
-    //console.log(i + ' - ' + strArgument);
+    console.log(i + ' - ' + strArgument);
     if ((strArgument.indexOf('-help') != -1) || (strArgument.indexOf('-?') != -1)) {
         var strTempFile = helper.ReadFile(__dirname + '/Help.help');
         console.log(strTempFile.toString());
@@ -45,6 +45,8 @@ console.log('strOutFile = ' + strOutFile);
 console.log('strSync = ' + strSync);
 
 if (strCommand != "") {
+    strCommand = strCommand.replace(/'/g,'"');
+    console.log('CommandExecuter :: '+strCommand);
     if (strSync == "off") {
         helper.ExecuteCommand(strCommand, strOutFile, true);
     }

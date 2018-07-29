@@ -13,14 +13,25 @@
             <h4>Client Agent</h4>
         </div>
         <div class="container">
-            <ul class="navbar-nav nav-tab">
+            <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link" href="/#CommandExecuter">Command Executer</a>
+                    <a class="nav-link active"  data-toggle="tab" href="#Instructions">Instructions</a>
                 </li>
-            </ul>     
+                <li class="nav-item">
+                    <a class="nav-link"  data-toggle="tab" href="#CommandExecuter">Command Executer</a>
+                </li>
+            </ul>   
         </div>
         <div class = "tab-content">
-            <div id = "CommandExecuter" class="container tab-pane active">
+            <div id = "Instructions" class="container tab-pane active"><br>
+                <div class="alert alert-info">
+                    Click on <strong>Command Executer</strong> tab<br>
+                    If your command has got paths with whitespaces then include them in single quotes (')<br>
+                    Eg : <strong>type 'd:\temp\new folder\temp.txt'</strong><br>
+                    If you try <strong>type "d:\temp\new folder\temp.txt"</strong> then it fails<br>
+                </div>
+            </div>
+            <div id = "CommandExecuter" class="container tab-pane fade"><br>
                 <form method="post" action="/ExecuteCommand">
                     <div class="form-group" class="col-8">
                         <input class="form-control form-control-sm" type = "text" name = "Command" placeholder = "command" required>
