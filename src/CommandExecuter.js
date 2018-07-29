@@ -46,7 +46,7 @@ console.log('strSync = ' + strSync);
 
 if (strCommand != "") {
     strCommand = strCommand.replace(/'/g,'"');
-    console.log('CommandExecuter :: '+strCommand);
+    //console.log('CommandExecuter :: '+strCommand);
     if (strSync == "off") {
         helper.ExecuteCommand(strCommand, strOutFile, true);
     }

@@ -71,7 +71,7 @@ var fpCreateDirectory = function CreateDirectory(strDirectoryFullPath) {
 }
 
 var fpExecuteCommand = function ExecuteCommand(strCommand, strOutFile, bCreateDone = false) {
-    console.log('ExecuteCommand :: '+strCommand);
+    //console.log('ExecuteCommand :: '+strCommand);
     Execute(strCommand, function (strError, strStdOut, strStdErr) {
         fpAppendToFile(strOutFile, 'Following is the result to the command - ' + '"' + strCommand + '"');
         fpAppendToFileWithHeader(strOutFile, strError, 'ERROR');
