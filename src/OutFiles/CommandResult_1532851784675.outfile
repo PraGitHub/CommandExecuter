@@ -1,0 +1,911 @@
+
+Following is the result to the command - "type "D:\temp\FieryCentral\FieryCentral\Device-bizhub PRO 1051-Constraints.txt""
+ERROR : 
+null
+STDOUT : 
+*EFBookCoverInType::*EFBookCoverTray                       MultiPageNoSpine                 PostFuserTray
+                                                                                           PostFuserTray2
+*EFBookCoverTray::*EFPerfectBindOpt                                  PBTray                         False
+*EFBookCoverTray::*EFPostFuser                                PostFuserTray                         False
+                                                             PostFuserTray2                         False
+*EFBookCoverTray::*EFRIPBooklet                                      PBTray                         TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+*EFBookletNoNSP::*EFRIPBooklet                                         True                   NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+*EFDuplex::*EFRIPBooklet                                              False                   NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                   LongEdge                   NestSaddleL
+                                                                                              NestSaddleR
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                           WrapCoverBookT
+                                                                  ShortEdge                   NestSaddleT
+                                                                                               PerfectTop
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+*EFFold::*EFMultFoldOpt                                      DoubleHalfFold                         False
+                                                                   GateFold                         False
+                                                                   HalfFold                         False
+                                                                  HalfZFold                         False
+                                                                    TriFold                         False
+                                                                      Zfold                         False
+                                                      Zfold_Large_MediaSize                         False
+*EFFold::*EFOutputBin                                       CollateHalfFold                         Lower
+                                                                                                    Upper
+                                                                                         SaddleStitcher_2
+                                                                                          PerfectBinder_2
+                                                             CollateTriFold                         Lower
+                                                                                                    Upper
+                                                                                         SaddleStitcher_2
+                                                                                          PerfectBinder_2
+                                                             DoubleHalfFold                         Lower
+                                                                                                    Upper
+                                                                                         SaddleStitcher_2
+                                                                                          PerfectBinder_2
+                                                                   GateFold                         Lower
+                                                                                                    Upper
+                                                                                         SaddleStitcher_2
+                                                                                          PerfectBinder_2
+                                                                   HalfFold                         Lower
+                                                                                                    Upper
+                                                                                         SaddleStitcher_2
+                                                                                          PerfectBinder_2
+                                                                  HalfZFold              SaddleStitcher_2
+                                                                                          PerfectBinder_2
+                                                                    TriFold                         Lower
+                                                                                                    Upper
+                                                                                         SaddleStitcher_2
+                                                                                          PerfectBinder_2
+                                                                      Zfold                         Lower
+                                                                                                    Upper
+                                                                                         SaddleStitcher_2
+                                                                                          PerfectBinder_2
+                                                      Zfold_Large_MediaSize                         Lower
+                                                                                                    Upper
+                                                                                         SaddleStitcher_2
+                                                                                          PerfectBinder_2
+*EFFold::*EFPunchHoleType                                   CollateHalfFold                    R2-generic
+                                                                                               R3-generic
+                                                                                               R4-generic
+                                                                                               MultiPunch
+                                                             CollateTriFold                    R2-generic
+                                                                                               R3-generic
+                                                                                               R4-generic
+                                                                                               MultiPunch
+                                                             DoubleHalfFold                    R2-generic
+                                                                                               R3-generic
+                                                                                               R4-generic
+                                                                                               MultiPunch
+                                                                   GateFold                    R2-generic
+                                                                                               R3-generic
+                                                                                               R4-generic
+                                                                                               MultiPunch
+                                                                   HalfFold                    R2-generic
+                                                                                               R3-generic
+                                                                                               R4-generic
+                                                                                               MultiPunch
+                                                                    TriFold                    R2-generic
+                                                                                               R3-generic
+                                                                                               R4-generic
+                                                                                               MultiPunch
+                                                                      Zfold                    R2-generic
+                                                                                               R3-generic
+                                                                                               R4-generic
+                                                                                               MultiPunch
+                                                      Zfold_Large_MediaSize                    R2-generic
+                                                                                               R3-generic
+                                                                                               R4-generic
+                                                                                               MultiPunch
+*EFFold::*EFRIPBooklet                                      CollateHalfFold                WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+*EFFold::*EFSaddleStitchOpt                                 CollateHalfFold                         False
+                                                             CollateTriFold                         False
+*EFFold::*EFStapler                                          CollateTriFold                        Stitch
+                                                                                                      2Up
+                                                                                                    2Left
+                                                                                                1UpRightS
+                                                                                                 1UpLeftS
+                                                                                                   2Right
+                                                             DoubleHalfFold                        Stitch
+                                                                                                      2Up
+                                                                                                    2Left
+                                                                                                1UpRightS
+                                                                                                 1UpLeftS
+                                                                                                   2Right
+                                                                   GateFold                        Stitch
+                                                                                                      2Up
+                                                                                                    2Left
+                                                                                                1UpRightS
+                                                                                                 1UpLeftS
+                                                                                                   2Right
+                                                                   HalfFold                        Stitch
+                                                                                                      2Up
+                                                                                                    2Left
+                                                                                                1UpRightS
+                                                                                                 1UpLeftS
+                                                                                                   2Right
+                                                                  HalfZFold                        Stitch
+                                                                    TriFold                        Stitch
+                                                                                                      2Up
+                                                                                                    2Left
+                                                                                                1UpRightS
+                                                                                                 1UpLeftS
+                                                                                                   2Right
+                                                                      Zfold                        Stitch
+                                                                                                      2Up
+                                                                                                    2Left
+                                                                                                1UpRightS
+                                                                                                 1UpLeftS
+                                                                                                   2Right
+                                                      Zfold_Large_MediaSize                        Stitch
+                                                                                                      2Up
+                                                                                                    2Left
+                                                                                                1UpRightS
+                                                                                                 1UpLeftS
+                                                                                                   2Right
+*EFFold::*EFTrimmer                                          CollateTriFold                          True
+                                                             DoubleHalfFold                          True
+                                                                   GateFold                          True
+                                                                   HalfFold                          True
+                                                                  HalfZFold                          True
+                                                                    TriFold                          True
+                                                                      Zfold                          True
+                                                      Zfold_Large_MediaSize                          True
+*EFImageFlag::*EFRIPBooklet                                            True                         TwoUp
+                                                                                               TwoUpRight
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                                    Speed
+                                                                                                   Double
+                                                                                              NestSaddleT
+                                                                                               PerfectTop
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+*EFJobStacking::*EFStackerOpt                                         False                         False
+                                                                       True                         False
+*EFMMInUse::*EFNUpOption                                               True                         16ULH
+                                                                                                    16ULV
+                                                                                                    16URH
+                                                                                                    16URV
+                                                                                                     2ULH
+                                                                                                     2ULV
+                                                                                                     2URH
+                                                                                                     2URV
+                                                                                                     4ULH
+                                                                                                     4ULV
+                                                                                                     4URH
+                                                                                                     4URV
+                                                                                                     6ULH
+                                                                                                     6ULV
+                                                                                                     6URH
+                                                                                                     6URV
+                                                                                                     9ULH
+                                                                                                     9ULV
+                                                                                                     9URH
+                                                                                                     9URV
+*EFMMInUse::*EFPageRange                                               True                          Even
+                                                                                                      Odd
+*EFMMInUse::*EFRIPBooklet                                              True                   NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                                   Double
+                                                                                                    Speed
+*EFMMInsType::*PageSize                                                 Tab                            A3
+                                                                                                       A4
+                                                                                                      A4R
+                                                                                                       A5
+                                                                                                       B4
+                                                                                                       B5
+                                                                                                    ISOB4
+                                                                                                    ISOB5
+                                                                                                     SRA3
+                                                                                                     SRA4
+                                                                                             TabloidExtra
+                                                                                                  Tabloid
+                                                                                                    Legal
+                                                                                                   Letter
+                                                                                                  LetterR
+                                                                                                Statement
+                                                                                                     8x13
+                                                                                       FanFoldGermanLegal
+                                                                                                    Folio
+                                                                                             F8.125x13.25
+                                                                                                       8K
+                                                                                                      16K
+                                                                                                 Postcard
+                                                                                                  A3Extra
+                                                                                                  A4Extra
+                                                                                                  A5Extra
+                                                                                                  B4Extra
+                                                                                                  B5Extra
+                                                                                               ISOB4Extra
+                                                                                               ISOB5Extra
+                                                                                                   12x18W
+                                                                                                   11x17W
+                                                                                              LetterExtra
+                                                                                           RHalfLetterPro
+*EFMMTabShift::*PageSize                                               True                            A3
+                                                                                                       A4
+                                                                                                      A4R
+                                                                                                       A5
+                                                                                                       B4
+                                                                                                       B5
+                                                                                                    ISOB4
+                                                                                                    ISOB5
+                                                                                                     SRA3
+                                                                                                     SRA4
+                                                                                             TabloidExtra
+                                                                                                  Tabloid
+                                                                                                    Legal
+                                                                                                   Letter
+                                                                                                  LetterR
+                                                                                                Statement
+                                                                                                     8x13
+                                                                                       FanFoldGermanLegal
+                                                                                                    Folio
+                                                                                             F8.125x13.25
+                                                                                                       8K
+                                                                                                      16K
+                                                                                                 Postcard
+                                                                                                  A3Extra
+                                                                                                  A4Extra
+                                                                                                  A5Extra
+                                                                                                  B4Extra
+                                                                                                  B5Extra
+                                                                                               ISOB4Extra
+                                                                                               ISOB5Extra
+                                                                                                   12x18W
+                                                                                                   11x17W
+                                                                                              LetterExtra
+                                                                                           RHalfLetterPro
+*EFMultFoldOpt::*EFOutputBin                                          False                      Folder_2
+*EFNUpOption::*EFRIPBooklet                                           16ULH                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                      16ULV                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                      16URH                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                      16URV                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       2ULH                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       2ULV                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       2URH                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       2URV                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       4ULH                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       4ULV                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       4URH                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       4URV                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       6ULH                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       6ULV                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       6URH                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       6URV                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       9ULH                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       9ULV                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       9URH                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                       9URV                        Double
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                              NestSaddleT
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                               PerfectTop
+                                                                                                    Speed
+                                                                                                    TwoUp
+                                                                                               TwoUpRight
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+*EFNUpOption::*EFSubsetFinishingInUse                                 16ULH                          True
+                                                                      16ULV                          True
+                                                                      16URH                          True
+                                                                      16URV                          True
+                                                                       2ULH                          True
+                                                                       2ULV                          True
+                                                                       2URH                          True
+                                                                       2URV                          True
+                                                                       4ULH                          True
+                                                                       4ULV                          True
+                                                                       4URH                          True
+                                                                       4URV                          True
+                                                                       6ULH                          True
+                                                                       6ULV                          True
+                                                                       6URH                          True
+                                                                       6URV                          True
+                                                                       9ULH                          True
+                                                                       9ULV                          True
+                                                                       9URH                          True
+                                                                       9URV                          True
+*EFOffsetJobs::*EFOutputBin                                            True                         Upper
+                                                                                                Stacker_2
+                                                                                               Stacker2_2
+                                                                                         SaddleStitcher_2
+                                                                                                 Folder_2
+                                                                                          PerfectBinder_2
+*EFOffsetJobs::*EFStapler                                              True                        Stitch
+                                                                                                      2Up
+                                                                                                    2Left
+                                                                                                1UpRightS
+                                                                                                 1UpLeftS
+                                                                                                   2Right
+*EFOutputBin::*EFPBCoverPrintStyle                                 Folder_2                         Blank
+                                                                                                 Both1in1
+                                                                                                 Both2in1
+                                                                                                 Both3in1
+                                                                                              Outside1in1
+                                                                                              Outside2in1
+                                                                                              Outside3in1
+                                                                      Lower                         Blank
+                                                                                                 Both1in1
+                                                                                                 Both2in1
+                                                                                                 Both3in1
+                                                                                              Outside1in1
+                                                                                              Outside2in1
+                                                                                              Outside3in1
+                                                            PerfectBinder_2                         Blank
+                                                                                                 Both1in1
+                                                                                                 Both2in1
+                                                                                                 Both3in1
+                                                                                              Outside1in1
+                                                                                              Outside2in1
+                                                                                              Outside3in1
+                                                           SaddleStitcher_2                         Blank
+                                                                                                 Both1in1
+                                                                                                 Both2in1
+                                                                                                 Both3in1
+                                                                                              Outside1in1
+                                                                                              Outside2in1
+                                                                                              Outside3in1
+                                                                    Stacker                         Blank
+                                                                                                 Both1in1
+                                                                                                 Both2in1
+                                                                                                 Both3in1
+                                                                                              Outside1in1
+                                                                                              Outside2in1
+                                                                                              Outside3in1
+                                                                   Stacker2                         Blank
+                                                                                                 Both1in1
+                                                                                                 Both2in1
+                                                                                                 Both3in1
+                                                                                              Outside1in1
+                                                                                              Outside2in1
+                                                                                              Outside3in1
+                                                                 Stacker2_2                         Blank
+                                                                                                 Both1in1
+                                                                                                 Both2in1
+                                                                                                 Both3in1
+                                                                                              Outside1in1
+                                                                                              Outside2in1
+                                                                                              Outside3in1
+                                                                StackerAuto                         Blank
+                                                                                                 Both1in1
+                                                                                                 Both2in1
+                                                                                                 Both3in1
+                                                                                              Outside1in1
+                                                                                              Outside2in1
+                                                                                              Outside3in1
+                                                                  Stacker_2                         Blank
+                                                                                                 Both1in1
+                                                                                                 Both2in1
+                                                                                                 Both3in1
+                                                                                              Outside1in1
+                                                                                              Outside2in1
+                                                                                              Outside3in1
+                                                                      Upper                         Blank
+                                                                                                 Both1in1
+                                                                                                 Both2in1
+                                                                                                 Both3in1
+                                                                                              Outside1in1
+                                                                                              Outside2in1
+                                                                                              Outside3in1
+*EFOutputBin::*EFPerfectBindOpt                             PerfectBinder_2                         False
+*EFOutputBin::*EFPunchHoleType                             SaddleStitcher_2                    R2-generic
+                                                                                               R3-generic
+                                                                                               R4-generic
+                                                                                               MultiPunch
+*EFOutputBin::*EFPunchOpt                                          Folder_2                          FD23
+*EFOutputBin::*EFRIPBooklet                                        Folder_2                WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                      Lower                WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                            PerfectBinder_2                WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                           SaddleStitcher_2                WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                    Stacker                WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                   Stacker2                WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                 Stacker2_2                WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                StackerAuto                WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                  Stacker_2                WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                      Upper                WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+*EFOutputBin::*EFSaddleStitchOpt                           SaddleStitcher_2                         False
+*EFOutputBin::*EFSort                                              Folder_2                  CrossCollate
+                                                                                               CrossGroup
+                                                            PerfectBinder_2                  CrossCollate
+                                                                                               CrossGroup
+                                                           SaddleStitcher_2                  CrossCollate
+                                                                                               CrossGroup
+                                                                 Stacker2_2                  CrossCollate
+                                                                                               CrossGroup
+                                                                  Stacker_2                  CrossCollate
+                                                                                               CrossGroup
+                                                                      Upper                  CrossCollate
+                                                                                               CrossGroup
+*EFOutputBin::*EFStackerOpt                                         Stacker                         False
+                                                                   Stacker2                         False
+                                                                                                      LS1
+                                                                 Stacker2_2                         False
+                                                                                                      LS1
+                                                                StackerAuto                         False
+                                                                  Stacker_2                         False
+*EFOutputBin::*EFStapler                                           Folder_2                      1UpLeftS
+                                                                                                1UpRightS
+                                                                                                    2Left
+                                                                                                   2Right
+                                                                                                      2Up
+                                                                                                   Stitch
+                                                                      Lower                        Stitch
+                                                            PerfectBinder_2                      1UpLeftS
+                                                                                                1UpRightS
+                                                                                                    2Left
+                                                                                                   2Right
+                                                                                                      2Up
+                                                                                                   Stitch
+                                                           SaddleStitcher_2                      1UpLeftS
+                                                                                                1UpRightS
+                                                                                                    2Left
+                                                                                                   2Right
+                                                                                                      2Up
+                                                                                                   Stitch
+                                                                    Stacker                      1UpLeftS
+                                                                                                1UpRightS
+                                                                                                    2Left
+                                                                                                   2Right
+                                                                                                      2Up
+                                                                                                   Stitch
+                                                                   Stacker2                      1UpLeftS
+                                                                                                1UpRightS
+                                                                                                    2Left
+                                                                                                   2Right
+                                                                                                      2Up
+                                                                                                   Stitch
+                                                                 Stacker2_2                      1UpLeftS
+                                                                                                1UpRightS
+                                                                                                    2Left
+                                                                                                   2Right
+                                                                                                      2Up
+                                                                                                   Stitch
+                                                                StackerAuto                      1UpLeftS
+                                                                                                1UpRightS
+                                                                                                    2Left
+                                                                                                   2Right
+                                                                                                      2Up
+                                                                                                   Stitch
+                                                                  Stacker_2                      1UpLeftS
+                                                                                                1UpRightS
+                                                                                                    2Left
+                                                                                                   2Right
+                                                                                                      2Up
+                                                                                                   Stitch
+                                                                      Upper                        Stitch
+*EFOutputBin::*EFStaplerOpt                                           Lower                         False
+                                                                      Upper                         False
+*EFPBCoverPrintStyle::*EFPBCoverSource                             Both1in1                        PBTray
+                                                                                            PostFuserTray
+                                                                                           PostFuserTray2
+                                                                   Both2in1                        PBTray
+                                                                                            PostFuserTray
+                                                                                           PostFuserTray2
+                                                                   Both3in1                        PBTray
+                                                                                            PostFuserTray
+                                                                                           PostFuserTray2
+                                                                Outside1in1                        PBTray
+                                                                                            PostFuserTray
+                                                                                           PostFuserTray2
+                                                                Outside2in1                        PBTray
+                                                                                            PostFuserTray
+                                                                                           PostFuserTray2
+                                                                Outside3in1                        PBTray
+                                                                                            PostFuserTray
+                                                                                           PostFuserTray2
+*EFPBCoverPrintStyle::*EFPBTrimMode                                     Off                            On
+*EFPBCoverPrintStyle::*EFPerfectBindOpt                               Blank                         False
+                                                                   Both1in1                         False
+                                                                   Both2in1                         False
+                                                                   Both3in1                         False
+                                                                Outside1in1                         False
+                                                                Outside2in1                         False
+                                                                Outside3in1                         False
+*EFPBCoverSource::*EFPerfectBindOpt                                  PBTray                         False
+                                                              PostFuserTray                         False
+                                                             PostFuserTray2                         False
+                                                                      Tray1                         False
+                                                                      Tray2                         False
+                                                                      Tray3                         False
+                                                                      Tray4                         False
+                                                                      Tray5                         False
+                                                                      Tray6                         False
+                                                                      Tray7                         False
+                                                                      Tray8                         False
+*EFPBCoverSource::*EFPostFuser                                PostFuserTray                         False
+                                                             PostFuserTray2                         False
+*EFPBTrimMode::*EFPerfectBindOpt                                        Off                         False
+                                                                         On                         False
+*EFPageDelivery::*EFStapler                              ReverseOrderFaceUp                        Stitch
+                                                                                                      2Up
+                                                                                                    2Left
+                                                                                                1UpRightS
+                                                                                                 1UpLeftS
+                                                                                                   2Right
+                                                            SameOrderFaceUp                        Stitch
+                                                                                                      2Up
+                                                                                                    2Left
+                                                                                                1UpRightS
+                                                                                                 1UpLeftS
+                                                                                                   2Right
+*EFPageRange::*EFRIPBooklet                                            Even                         TwoUp
+                                                                                               TwoUpRight
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                                    Speed
+                                                                                                   Double
+                                                                                              NestSaddleT
+                                                                                               PerfectTop
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+                                                                        Odd                         TwoUp
+                                                                                               TwoUpRight
+                                                                                                  Perfect
+                                                                                             PerfectRight
+                                                                                              NestSaddleL
+                                                                                              NestSaddleR
+                                                                                                    Speed
+                                                                                                   Double
+                                                                                              NestSaddleT
+                                                                                               PerfectTop
+                                                                                                 TwoUpTop
+                                                                                           WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+*EFPageRange::*EFSubsetFinishingInUse                                  Even                          True
+                                                                        Odd                          True
+*EFPerfectBindOpt::*EFRIPBooklet                                      False                WrapCoverBookL
+                                                                                           WrapCoverBookR
+                                                                                           WrapCoverBookT
+*EFPunchHoleType::*EFPunchOpt                                    R2-generic                         False
+                                                                 R3-generic                         False
+                                                                                                     FD24
+                                                                 R4-generic                         False
+                                                                                                     FD23
+*EFPunchHoleType::*EFStreamPunchOpt                              MultiPunch                         False
+*EFRIPBooklet::*EFStapler                                       NestSaddleL                         False
+                                                                                                 1UpLeftS
+                                                                                                1UpRightS
+                                                                                                    2Left
+                                                                                                   2Right
+                                                                                                      2Up
+                                                                NestSaddleR                         False
+                                                                                                 1UpLeftS
+                                                                                                1UpRightS
+                                                                                                    2Left
+                                                                                                   2Right
+                                                                                                      2Up
+                                                                NestSaddleT                         False
+                                                                                                 1UpLeftS
+                                                                                                1UpRightS
+                                                                                                    2Left
+                                                                                                   2Right
+                                                                                                      2Up
+*EFRIPBooklet::*EFSubsetFinishingInUse                               Double                          True
+                                                                NestSaddleL                          True
+                                                                NestSaddleR                          True
+                                                                NestSaddleT                          True
+                                                                    Perfect                          True
+                                                               PerfectRight                          True
+                                                                 PerfectTop                          True
+                                                                      Speed                          True
+                                                                      TwoUp                          True
+                                                                 TwoUpRight                          True
+                                                                   TwoUpTop                          True
+                                                             WrapCoverBookL                          True
+                                                             WrapCoverBookR                          True
+                                                             WrapCoverBookT                          True
+*EFSaddleStitchOpt::*EFStapler                                        False                        Stitch
+*EFStapler::*EFStaplerOpt                                          1UpLeftS                         False
+                                                                  1UpRightS                         False
+                                                                      2Left                         False
+                                                                     2Right                         False
+                                                                        2Up                         False
+
+STDERR : 
+
+*CommandExecuterEOC*

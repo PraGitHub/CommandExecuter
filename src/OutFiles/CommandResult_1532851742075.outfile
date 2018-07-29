@@ -1,0 +1,12 @@
+
+Following is the result to the command - ""type D:\temp\FieryCentral\FieryCentral\Device-bizhub PRO 1051-Constraints.txt""
+ERROR : 
+Error: Command failed: "type D:\temp\FieryCentral\FieryCentral\Device-bizhub PRO 1051-Constraints.txt"
+The filename, directory name, or volume label syntax is incorrect.
+
+STDOUT : 
+
+STDERR : 
+The filename, directory name, or volume label syntax is incorrect.
+
+*CommandExecuterEOC*
