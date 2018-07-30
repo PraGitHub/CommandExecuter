@@ -4,13 +4,21 @@ var request = require('request');
 var bodyParser = require('body-parser');
 var helper = require('./HelperFunctions');
 var app = express();
-var httpPort;
+var httpPort = '';
+var apiPort = '';
 var strHTMLPath = helper.GetHTMLFolder();
 helper.CreateDirectory(__dirname + '/OutFiles');
 
 if(process.argv.length>2){
-    var strArg = process.argv[2];
-    httpPort = helper.GetStringExcludingSubStirng(strArg,'-port=');
+    for(let i=2;i<process.argv.length;i++){
+        var strArg = process.argv[i];
+        if(httpPort == ''){
+            httpPort = helper.GetStringExcludingSubStirng(strArg,'-port=');
+        }
+        if(apiPort == ''){
+            apiPort = helper.GetStringExcludingSubStirng(strArg,'-apiport=');
+        }
+    }
 }
 
 if(httpPort == ''){
@@ -89,10 +97,41 @@ function CommandLineMethod(httpReq,httpRes){
 }
 
 function APIMethod(httpReq,httpRes){
-    request('http://localhost:8087/execute/ipconfig',function(err,res,body){
+    var strURL = 'http://localhost:'+apiPort+'/execute/';
+    var strCommand = httpReq.body.Command;
+    var strEncodedCommand = helper.EncodeURL(strCommand);
+    //console.log('strEncodedCommand = ',strEncodedCommand);
+    strURL = strURL + strEncodedCommand;
+    //console.log('strURL = ',strURL);
+    request(strURL,function(err,res,body){
+        if(err){
+            httpRes.write('<div class="alert alert-danger">');
+            httpRes.write('Problem with CommandExecuterAPI');
+            httpRes.end();
+            return;
+        }
         var JSONBody = JSON.parse(body);
-        console.log(JSONBody.StdOut);
-        //httpRes.write(helper.ConvertToHTML(body.StdOut));
-        //Need to complete this method
+        //console.log(JSONBody);
+        var strOutput = 'Command : \r\n';
+        strOutput = strOutput.concat(JSONBody.Command);
+        strOutput = strOutput.concat('\r\n');
+        strOutput = strOutput.concat('Error : \r\n');
+        if(JSONBody.StdOut == ''){
+            strOutput = strOutput.concat(JSON.stringify(JSONBody.Error));
+        }
+        else{
+            strOutput = strOutput.concat('null');
+        }
+        strOutput = strOutput.concat('\r\n');
+        strOutput = strOutput.concat('STDOUT : \r\n');
+        strOutput = strOutput.concat(JSONBody.StdOut);
+        strOutput = strOutput.concat('\r\n');
+        strOutput = strOutput.concat('STDERR : \r\n');
+        strOutput = strOutput.concat(JSONBody.stdErr);
+        strOutput = strOutput.concat('\r\n');
+        httpRes.write('<div class="alert alert-success">');
+        httpRes.write(helper.ConvertToHTML(strOutput));
+        httpRes.write('</div>');
+        httpRes.end();
     });
 }

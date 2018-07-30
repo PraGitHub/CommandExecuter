@@ -1,5 +1,6 @@
 var fs = require('fs');
 var ChildProcess = require('child_process');
+var urlencode = require('urlencode');
 var Execute = ChildProcess.exec;
 var ExecuteSync = ChildProcess.execSync;
 var WatchFile = fs.watchFile;
@@ -151,6 +152,10 @@ var fpRemoveAll = function RemoveAll(strString,strSubString){
     return strOutput;
 }
 
+var fpEncodeURL = function EncodeURL(strURL){
+    return urlencode(strURL);
+}
+
 exports.GetStringExcludingSubStirng = fpGetStringExcludingSubStirng;
 exports.ReadFile = fpReadFile;
 exports.ExecuteCommand = fpExecuteCommand;
@@ -168,3 +173,4 @@ exports.ConvertToHTML = fpConvertToHTML;
 exports.GetHTMLFolder = fpGetHTMLFolder;
 exports.Execute = Execute;
 exports.RemoveAll = fpRemoveAll;
+exports.EncodeURL = fpEncodeURL;
