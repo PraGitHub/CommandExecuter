@@ -1,5 +1,6 @@
 // JavaScript source code
 var express = require('express');
+var request = require('request');
 var bodyParser = require('body-parser');
 var helper = require('./HelperFunctions');
 var app = express();
@@ -29,16 +30,25 @@ app.get('/', function (httpReq, httpRes) {
 });
 
 app.post('/ExecuteCommand', function (httpReq, httpRes) {
+    httpRes.write(helper.ReadFile(strHTMLPath+'/CommandResult.html').toString());
+    httpRes.write('<div class="alert alert-info"><strong>')
+    httpRes.write('Executing the command "' + httpReq.body.Command + '" ...');
+    httpRes.write('</strong></div>');
+    if(httpReq.body.Mode == '0'){
+        CommandLineMethod(httpReq,httpRes);
+    }
+    else{
+        APIMethod(httpReq,httpRes);
+    }
+});
+
+function CommandLineMethod(httpReq,httpRes){
     var strCommand = httpReq.body.Command;
     var strResultFile = __dirname + '/OutFiles/CommandResult_' + helper.GetTimeStamp() + '.outfile';
     var strResultFileCE = __dirname + '/OutFiles/CEResult_' + helper.GetTimeStamp() + '.outfile';
     helper.AppendToFile(strResultFile, '');
     helper.AppendToFile(strResultFileCE, '');
     helper.ExecuteCommand('node CommandExecuter -command="' + strCommand + '" -result="' + strResultFile + '"', strResultFileCE, true);
-    httpRes.write(helper.ReadFile(strHTMLPath+'/CommandResult.html').toString());
-    httpRes.write('<div class="alert alert-info"><strong>')
-    httpRes.write('Executing the command "' + strCommand + '" ...');
-    httpRes.write('</strong></div>');
 
     helper.WatchFile(strResultFileCE + 'DONE', function (currentStatus, previousStatus) {
         if (currentStatus.mode > previousStatus.mode) {
@@ -68,7 +78,7 @@ app.post('/ExecuteCommand', function (httpReq, httpRes) {
             if (helper.DoesFileExist(strResultFile + 'DONE')) {
                 var strResult = helper.ReadFile(strResultFile);
                 httpRes.write('<div class="alert alert-success">');
-                httpRes.write(helper.ConvertToHTML(strResult));
+                httpRes.write(helper.ConvertToHTML(strResult.toString()));
                 httpRes.end();
                 helper.DeleteFile(strResultFile + 'DONE');
                 helper.DeleteFile(strResultFileCE + 'DONE');
@@ -76,5 +86,13 @@ app.post('/ExecuteCommand', function (httpReq, httpRes) {
             }
         }
     });
-});
+}
 
+function APIMethod(httpReq,httpRes){
+    request('http://localhost:8087/execute/ipconfig',function(err,res,body){
+        var JSONBody = JSON.parse(body);
+        console.log(JSONBody.StdOut);
+        //httpRes.write(helper.ConvertToHTML(body.StdOut));
+        //Need to complete this method
+    });
+}

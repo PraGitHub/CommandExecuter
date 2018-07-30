@@ -127,7 +127,7 @@ var fpDoesFileExist = function DoesFileExist(strFileFullpath) {
 var fpConvertToHTML = function ConvertToHTML(strData) {
     var strHTMLToReturn = "";
     var strHTMLOutput = "";
-    var strTempData = strData.toString();
+    var strTempData = strData;
     while (true) {
         var iPos = strTempData.indexOf('\n');
         var strLine = strTempData.substr(0, iPos);
