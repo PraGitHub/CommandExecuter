@@ -17,12 +17,21 @@ Useful links :
 var express = require('express');
 var app = express();
 var helper = require(__dirname+'/HelperFunctions.js');
-var httpPort = 8085;
+var httpPort;
 var strHTMLPath = helper.GetHTMLFolder();
+
+if(process.argv.length>2){
+    var strArg = process.argv[2];
+    httpPort = helper.GetStringExcludingSubStirng(strArg,'-port=');
+}
+
+if(httpPort == ''){
+    httpPort = 8085;
+}
 
 app.listen(httpPort,function(err,res){
     if(err) throw err;
-    console.log('CommandExecuter @ 8085');
+    console.log('CommandExecuterAPI @ '+httpPort);
 });
 
 app.get('/',function(httpReq,httpRes){
@@ -37,10 +46,15 @@ app.get('/Execute/:command',function(httpReq,httpRes){
             StdOut:null,
             StdErr:null
         };
-        console.log(strStdOut);
+        //console.log(strStdOut);
         httpRes.setHeader('Content-Type', 'application/json');
         JSONResponse.Error = strError;
-        JSONResponse.StdOut = strStdOut.toString('utf-8');
+        //strStdOut = strStdOut.toString();
+        //console.log(strStdOut.length);
+        //strStdOut.replace(/\u0000/g,'');  did not work
+        var strStdOutCleaned = helper.RemoveAll(strStdOut,'\u0000');
+        JSONResponse.StdOut = strStdOutCleaned;
+        //JSONResponse.StdOut = strStdOut;
         JSONResponse.StdErr = strStdErr;
         //httpRes.write(JSON.stringify(JSONResponse));
         httpRes.json(JSONResponse);
