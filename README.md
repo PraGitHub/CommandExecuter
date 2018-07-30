@@ -8,7 +8,7 @@ How to use ?
       run 'npm install'
 
     To execute commands (html forms)
-        run 'node ClientAgentTemp -port=PortNumber'
+        run 'node ClientAgentTemp -port=PortNumber -apiport=PortNumberOfCommandExecuterAPI'
             Default port = 8086
         Open your browser - http://localhost:8086/
 
