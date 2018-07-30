@@ -140,6 +140,17 @@ var fpConvertToHTML = function ConvertToHTML(strData) {
     return strHTMLOutput;
 }
 
+var fpRemoveAll = function RemoveAll(strString,strSubString){
+    var strOutput = '';
+    for(let i=0;i<strString.length;i++){
+        if( strString.substr(i,1) == strSubString){
+            continue;
+        }
+        strOutput = strOutput + strString.substr(i,1);
+    }
+    return strOutput;
+}
+
 exports.GetStringExcludingSubStirng = fpGetStringExcludingSubStirng;
 exports.ReadFile = fpReadFile;
 exports.ExecuteCommand = fpExecuteCommand;
@@ -156,3 +167,4 @@ exports.DeleteFile = DeleteFile;
 exports.ConvertToHTML = fpConvertToHTML;
 exports.GetHTMLFolder = fpGetHTMLFolder;
 exports.Execute = Execute;
+exports.RemoveAll = fpRemoveAll;

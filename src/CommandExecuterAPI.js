@@ -46,10 +46,15 @@ app.get('/Execute/:command',function(httpReq,httpRes){
             StdOut:null,
             StdErr:null
         };
-        console.log(strStdOut);
+        //console.log(strStdOut);
         httpRes.setHeader('Content-Type', 'application/json');
         JSONResponse.Error = strError;
-        JSONResponse.StdOut = strStdOut.toString('utf-8');
+        //strStdOut = strStdOut.toString();
+        //console.log(strStdOut.length);
+        //strStdOut.replace(/\u0000/g,'');  did not work
+        var strStdOutCleaned = helper.RemoveAll(strStdOut,'\u0000');
+        JSONResponse.StdOut = strStdOutCleaned;
+        //JSONResponse.StdOut = strStdOut;
         JSONResponse.StdErr = strStdErr;
         //httpRes.write(JSON.stringify(JSONResponse));
         httpRes.json(JSONResponse);
