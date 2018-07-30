@@ -3,9 +3,18 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var helper = require('./HelperFunctions');
 var app = express();
-var httpPort = 8086;
+var httpPort;
 var strHTMLPath = helper.GetHTMLFolder();
 helper.CreateDirectory(__dirname + '/OutFiles');
+
+if(process.argv.length>2){
+    var strArg = process.argv[2];
+    httpPort = helper.GetStringExcludingSubStirng(strArg,'-port=');
+}
+
+if(httpPort == ''){
+    httpPort = 8086;
+}
 
 app.listen(httpPort, function () {
     console.log('Client Agent is listening to ' + httpPort);
@@ -58,7 +67,7 @@ app.post('/ExecuteCommand', function (httpReq, httpRes) {
             }
             if (helper.DoesFileExist(strResultFile + 'DONE')) {
                 var strResult = helper.ReadFile(strResultFile);
-                httpRes.write('<div class="alert alert-success"><strong>');
+                httpRes.write('<div class="alert alert-success">');
                 httpRes.write(helper.ConvertToHTML(strResult));
                 httpRes.end();
                 helper.DeleteFile(strResultFile + 'DONE');

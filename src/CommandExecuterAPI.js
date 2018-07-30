@@ -17,12 +17,21 @@ Useful links :
 var express = require('express');
 var app = express();
 var helper = require(__dirname+'/HelperFunctions.js');
-var httpPort = 8085;
+var httpPort;
 var strHTMLPath = helper.GetHTMLFolder();
+
+if(process.argv.length>2){
+    var strArg = process.argv[2];
+    httpPort = helper.GetStringExcludingSubStirng(strArg,'-port=');
+}
+
+if(httpPort == ''){
+    httpPort = 8085;
+}
 
 app.listen(httpPort,function(err,res){
     if(err) throw err;
-    console.log('CommandExecuter @ 8085');
+    console.log('CommandExecuterAPI @ '+httpPort);
 });
 
 app.get('/',function(httpReq,httpRes){
