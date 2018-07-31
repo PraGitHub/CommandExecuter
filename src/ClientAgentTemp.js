@@ -112,10 +112,10 @@ function APIMethod(httpReq,httpRes){
         }
         var JSONBody = JSON.parse(body);
         //console.log(JSONBody);
-        var strOutput = 'Command : \r\n';
+        var strOutput = '<strong>Command :</strong> \r\n';
         strOutput = strOutput.concat(JSONBody.Command);
         strOutput = strOutput.concat('\r\n');
-        strOutput = strOutput.concat('Error : \r\n');
+        strOutput = strOutput.concat('<strong>Error :</strong> \r\n');
         if(JSONBody.StdOut == ''){
             strOutput = strOutput.concat(JSON.stringify(JSONBody.Error));
         }
@@ -123,10 +123,10 @@ function APIMethod(httpReq,httpRes){
             strOutput = strOutput.concat('null');
         }
         strOutput = strOutput.concat('\r\n');
-        strOutput = strOutput.concat('STDOUT : \r\n');
+        strOutput = strOutput.concat('<strong>STDOUT :</strong> \r\n');
         strOutput = strOutput.concat(JSONBody.StdOut);
         strOutput = strOutput.concat('\r\n');
-        strOutput = strOutput.concat('STDERR : \r\n');
+        strOutput = strOutput.concat('<strong>STDERR :</strong> \r\n');
         strOutput = strOutput.concat(JSONBody.stdErr);
         strOutput = strOutput.concat('\r\n');
         httpRes.write('<div class="alert alert-success">');
