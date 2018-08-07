@@ -112,25 +112,28 @@ function APIMethod(httpReq,httpRes){
         }
         var JSONBody = JSON.parse(body);
         //console.log(JSONBody);
-        var strOutput = '<strong>Command :</strong> \r\n';
-        strOutput = strOutput.concat(JSONBody.Command);
-        strOutput = strOutput.concat('\r\n');
-        strOutput = strOutput.concat('<strong>Error :</strong> \r\n');
+        var strOutput = '<strong>Command :</strong> <br>';
+        strOutput = strOutput.concat(helper.ConvertToHTML(JSONBody.Command));
+        strOutput = strOutput.concat('<br>');
+        strOutput = strOutput.concat('<strong>Error :</strong> <br>');
         if(JSONBody.StdOut == ''){
-            strOutput = strOutput.concat(JSON.stringify(JSONBody.Error));
+            var strErrOut = JSON.stringify(JSONBody.Error);
+            strOutput = strOutput.concat(helper.ConvertToHTML(strErrOut));
         }
         else{
-            strOutput = strOutput.concat('null');
+            strOutput = strOutput.concat(helper.ConvertToHTML('null'));
         }
-        strOutput = strOutput.concat('\r\n');
-        strOutput = strOutput.concat('<strong>STDOUT :</strong> \r\n');
-        strOutput = strOutput.concat(JSONBody.StdOut);
-        strOutput = strOutput.concat('\r\n');
-        strOutput = strOutput.concat('<strong>STDERR :</strong> \r\n');
-        strOutput = strOutput.concat(JSONBody.stdErr);
-        strOutput = strOutput.concat('\r\n');
+        strOutput = strOutput.concat('<br>');
+        strOutput = strOutput.concat('<strong>STDOUT :</strong> <br>');
+        strOutput = strOutput.concat(helper.ConvertToHTML(JSONBody.StdOut));
+        strOutput = strOutput.concat('<br>');
+        strOutput = strOutput.concat('<strong>STDERR :</strong> <br>');
+        if(JSONBody.stdErr!=null){
+            strOutput = strOutput.concat(helper.ConvertToHTML(JSONBody.stdErr));
+            strOutput = strOutput.concat('<br>');
+        }
         httpRes.write('<div class="alert alert-success">');
-        httpRes.write(helper.ConvertToHTML(strOutput));
+        httpRes.write(strOutput);
         httpRes.write('</div>');
         httpRes.end();
     });

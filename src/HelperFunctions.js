@@ -1,6 +1,8 @@
 var fs = require('fs');
 var ChildProcess = require('child_process');
 var urlencode = require('urlencode');
+var xmlentities = require('html-entities').XmlEntities;
+var entities = new xmlentities();
 var Execute = ChildProcess.exec;
 var ExecuteSync = ChildProcess.execSync;
 var WatchFile = fs.watchFile;
@@ -127,17 +129,19 @@ var fpDoesFileExist = function DoesFileExist(strFileFullpath) {
 
 var fpConvertToHTML = function ConvertToHTML(strData) {
     var strHTMLToReturn = "";
-    var strHTMLOutput = "";
+    var strHTMLOutput = "<pre>";
     var strTempData = strData;
     while (true) {
         var iPos = strTempData.indexOf('\n');
         var strLine = strTempData.substr(0, iPos);
+        strLine = entities.encode(strLine);
         if (strLine == null || strLine == "") {//EOF
             break;
         }
         strHTMLOutput = strHTMLOutput + '<a>' + strLine + '</a><br/>';
         strTempData = strTempData.substr(iPos + 1);
     }
+    strHTMLOutput = strHTMLOutput + "</pre>";
     return strHTMLOutput;
 }
 
