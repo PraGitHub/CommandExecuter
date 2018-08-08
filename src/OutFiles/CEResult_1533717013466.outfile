@@ -1,0 +1,17 @@
+
+Following is the result to the command - "node CommandExecuter -command="type e:\efi\server\configuration\fierycentral\fctrayicon.xml" -result="d:\MyLearnings\NodeJS\CommandExecuter\CommandExecuter\src/OutFiles/CommandResult_1533717013466.outfile""
+ERROR : 
+null
+STDOUT : 
+0 - C:\Program Files\nodejs\node.exe
+1 - d:\MyLearnings\NodeJS\CommandExecuter\CommandExecuter\src\CommandExecuter
+2 - -command=type e:\efi\server\configuration\fierycentral\fctrayicon.xml
+3 - -result=d:\MyLearnings\NodeJS\CommandExecuter\CommandExecuter\src/OutFiles/CommandResult_1533717013466.outfile
+strInFile = 
+strCommand = type e:\efi\server\configuration\fierycentral\fctrayicon.xml
+strOutFile = d:\MyLearnings\NodeJS\CommandExecuter\CommandExecuter\src/OutFiles/CommandResult_1533717013466.outfile
+strSync = off
+
+STDERR : 
+
+*CommandExecuterEOC*
