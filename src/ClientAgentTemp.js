@@ -116,7 +116,7 @@ function APIMethod(httpReq,httpRes){
         strOutput = strOutput.concat(helper.ConvertToHTML(JSONBody.Command));
         strOutput = strOutput.concat('<br>');
         strOutput = strOutput.concat('<strong>Error :</strong> <br>');
-        if(JSONBody.StdOut == ''){
+        if(JSONBody.StdOut == null || JSONBody.StdOut == ''){
             var strErrOut = JSON.stringify(JSONBody.Error);
             strOutput = strOutput.concat(helper.ConvertToHTML(strErrOut));
         }
@@ -128,10 +128,11 @@ function APIMethod(httpReq,httpRes){
         strOutput = strOutput.concat(helper.ConvertToHTML(JSONBody.StdOut));
         strOutput = strOutput.concat('<br>');
         strOutput = strOutput.concat('<strong>STDERR :</strong> <br>');
-        if(JSONBody.stdErr!=null){
-            strOutput = strOutput.concat(helper.ConvertToHTML(JSONBody.stdErr));
+        if(JSONBody.StdErr!=null){
+            strOutput = strOutput.concat(helper.ConvertToHTML(JSONBody.StdErr));
             strOutput = strOutput.concat('<br>');
         }
+        //console.log(strOutput);
         httpRes.write('<div class="alert alert-success">');
         httpRes.write(strOutput);
         httpRes.write('</div>');
